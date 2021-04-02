@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:musix/screens/home.dart';
+import 'package:musix/screens/home/home.dart';
 import 'package:musix/utils/theme_colors.dart';
 
 void main() {

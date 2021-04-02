@@ -6,6 +6,8 @@ import 'package:line_icons/line_icons.dart';
 import 'package:musix/widgets/poster.dart';
 
 class Player extends StatelessWidget {
+  String heroTag;
+  Player({this.heroTag = "player-poster"});
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -76,7 +78,7 @@ class Player extends StatelessWidget {
                                 child: Container(
                                     color: Colors.white,
                                     alignment: Alignment.center,
-                                    child: Posters()),
+                                    child: Posters(heroTag: heroTag,)),
                               ),
                               Expanded(
                                 flex: 1,

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class Posters extends StatelessWidget {
+  String heroTag;
+  Posters({this.heroTag = "player-poster"});
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -28,7 +30,7 @@ class Posters extends StatelessWidget {
           height: _height / 3,
           width: _height / 3,
           child: Hero(
-            tag: "player-poster",
+            tag: this.heroTag,
             child: Image.asset("assets/Something_Just_Like_This.png"),
           ),
         ),

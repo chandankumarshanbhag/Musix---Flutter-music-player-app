@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musix/screens/player.dart';
+import 'package:musix/screens/player/player.dart';
 
 class BottomMusicPlayer extends StatelessWidget {
   @override

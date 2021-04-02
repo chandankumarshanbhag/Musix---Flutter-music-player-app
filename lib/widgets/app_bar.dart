@@ -65,11 +65,12 @@ class Appbar extends StatelessWidget {
                       indicatorColor: Theme.of(context).primaryColor,
                       indicatorSize: TabIndicatorType.full),
                   tabs: [
+                    
                     Container(
                       height: 20,
                       child: Tab(
                         child: Text(
-                          "PLAYLISTS",
+                          "SONGS",
                           style: Theme.of(context).textTheme.subtitle1,
                         ),
                         iconMargin: EdgeInsets.all(0),
@@ -89,7 +90,7 @@ class Appbar extends StatelessWidget {
                       height: 20,
                       child: Tab(
                         child: Text(
-                          "SONGS",
+                          "ARTISTS",
                           style: Theme.of(context).textTheme.subtitle1,
                         ),
                         iconMargin: EdgeInsets.all(0),
@@ -99,12 +100,12 @@ class Appbar extends StatelessWidget {
                       height: 20,
                       child: Tab(
                         child: Text(
-                          "ARTISTS",
+                          "PLAYLISTS",
                           style: Theme.of(context).textTheme.subtitle1,
                         ),
                         iconMargin: EdgeInsets.all(0),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
