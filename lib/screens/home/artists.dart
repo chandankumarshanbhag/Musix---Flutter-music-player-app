@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:musix/data/top100artists.dart';
+import 'package:musix/screens/artist/artist.dart';
 
 class Artists extends StatelessWidget {
   @override
@@ -16,30 +17,35 @@ class Artists extends StatelessWidget {
         semanticChildCount: 3,
         itemCount: 50,
         itemBuilder: (BuildContext, int index) {
-          return Container(
-            child: Column(
-              children: [
-                Container(
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(100)),
-                  height: 100,
-                  width: 100,
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  child: Image.network(
-                    top100artists[index]["images"][1]
-                        .toString()
-                        .replaceAll("\\", ""),
-                    width: 100,
+          return GestureDetector(
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Artist()));
+            },
+            child: Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(100)),
                     height: 100,
-                    fit: BoxFit.cover,
+                    width: 100,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Image.network(
+                      top100artists[index]["images"][1]
+                          .toString()
+                          .replaceAll("\\", ""),
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  top100artists[index]["artist"],
-                  style: Theme.of(context).textTheme.bodyText1,
-                )
-              ],
+                  SizedBox(height: 10),
+                  Text(
+                    top100artists[index]["artist"],
+                    style: Theme.of(context).textTheme.bodyText1,
+                  )
+                ],
+              ),
             ),
           );
         },
